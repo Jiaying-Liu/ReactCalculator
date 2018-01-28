@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.calculator {
+  text-align: center
+}
+
+.buttons {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.buttons .btn {
+  border-color: black;
+}
+
+.numberButtons {
+  float: left;
+}
+
+.operatorButtons {
+  float: left;
+}
+
+.result-bar {
+  text-align: center;
+  width: 25%;
+  margin: auto;
+}
+
+.result-bar input{
+  text-align: right;
+}
