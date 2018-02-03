@@ -8,6 +8,12 @@ body {
   text-align: center
 }
 
+.calculator .btn{
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+}
+
 .buttons {
   overflow: hidden;
   display: inline-block;
@@ -19,6 +25,7 @@ body {
 
 .numberButtons {
   float: left;
+  margin-right: 5px;
 }
 
 .operatorButtons {

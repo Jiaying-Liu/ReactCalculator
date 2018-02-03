@@ -4,7 +4,6 @@ import OperatorButton from './operatorButton';
 const OperatorButtonLayout = (props) => {
     return (
         <div>
-            <OperatorButton className='btn btn-secondary' label='C' clickOperator={props.clear} />
             <div>
                 <OperatorButton className='btn btn-secondary' label='+' clickOperator={props.getSym} />
                 <OperatorButton className='btn btn-secondary' label='-' clickOperator={props.getSym} />
@@ -14,10 +13,17 @@ const OperatorButtonLayout = (props) => {
                 <OperatorButton className='btn btn-secondary' label='/' clickOperator={props.getSym} />
             </div>
             <div>
-                <OperatorButton className='btn btn-secondary' label='(' clickOperator={props.getSym} />
-                <OperatorButton className='btn btn-secondary' label=')' clickOperator={props.getSym} />
+                <OperatorButton 
+                    className='btn btn-secondary' 
+                    label='x^2' 
+                    clickOperator={props.square} />
+                <OperatorButton className='btn btn-secondary' label='sqrt' clickOperator={props.squareRoot} />
             </div>
-            <OperatorButton className='btn btn-primary' label='=' clickOperator={props.calculate} />
+            <div>
+                <OperatorButton className='btn btn-secondary' label='^' clickOperator={props.getSym} />
+                <OperatorButton className='btn btn-secondary' label='%' clickOperator={props.getSym} />
+            </div>
+            <OperatorButton className='btn btn-primary equal-btn' label='=' clickOperator={props.calculate} />
         </div>
     );
 }

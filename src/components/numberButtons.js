@@ -20,8 +20,10 @@ const NumberButtons = (props) => {
         <button className='btn btn-secondary' onClick={(event) => props.onButtonClick(8)}>8</button>
         <button className='btn btn-secondary' onClick={(event) => props.onButtonClick(9)}>9</button>
       </div>
-      <button className='btn btn-secondary' onClick={(event) => props.onButtonClick(0)}>0</button>
-      <button className='btn btn-secondary' onClick={(event) => props.onButtonClick('.')}>.</button>
+      <div style={{float: 'right'}}>
+        <button className='btn btn-secondary' onClick={(event) => props.onButtonClick(0)}>0</button>
+        <button className='btn btn-secondary' onClick={(event) => props.onButtonClick('.')}>.</button>
+      </div>
     </div>
   );
 };
