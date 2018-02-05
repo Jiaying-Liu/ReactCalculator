@@ -74,7 +74,7 @@ export default class Calculator extends Component {
 
   render() {
     return (
-      <div className="calculator">
+      <div className="calculator centered">
         <div className="result-bar">
           <input className='form-control' value={this.state.result} disabled={true} />
         </div>
