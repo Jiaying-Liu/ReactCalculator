@@ -8,6 +8,8 @@ body {
   text-align: center;
   margin: 25px;
   display: inline-block;
+  border: solid;
+  box-sizing: border-box;
 }
 
 .centered {
@@ -22,6 +24,14 @@ body {
   height: 35px;
   width: 35px;
   padding: 0px;
+}
+
+.calculator .btn.equal-btn {
+  width: 70px;
+}
+
+.calculator .btn.zero-button {
+  width: 70px;
 }
 
 .buttons {
@@ -44,8 +54,8 @@ body {
 
 .result-bar {
   text-align: center;
-  width: 100%;
-  margin: auto;
+  /* width: 100%; */
+  margin: 5px;
   margin-bottom: 15px;
 }
 
