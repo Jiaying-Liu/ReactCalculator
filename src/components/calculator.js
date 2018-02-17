@@ -15,7 +15,7 @@ export default class Calculator extends Component {
     };
   }
 
-  getSym(num) {
+  getNum(num) {
     var newResult;
     if(this.state.initCal) {
       newResult = num;
@@ -28,6 +28,14 @@ export default class Calculator extends Component {
       initCal: false, 
       result: newResult 
     });
+  }
+
+  getOp(op) {
+    var newResult = this.state.result.toString() + op;
+    this.setState({
+      initCal: false,
+      result: newResult
+    })
   }
 
   calculate() {
@@ -82,14 +90,14 @@ export default class Calculator extends Component {
           <div className="numberButtons">
             <div className="clearButtons" >
               <OperatorButton className='btn btn-secondary' label='C' clickOperator={this.clear.bind(this)} />
-              <OperatorButton className='btn btn-secondary' label='(' clickOperator={this.getSym.bind(this)} />
-              <OperatorButton className='btn btn-secondary' label=')' clickOperator={this.getSym.bind(this)} />
+              <OperatorButton className='btn btn-secondary' label='(' clickOperator={this.getOp.bind(this)} />
+              <OperatorButton className='btn btn-secondary' label=')' clickOperator={this.getOp.bind(this)} />
             </div>
-            <NumberButtons onButtonClick = {this.getSym.bind(this)} />
+            <NumberButtons onButtonClick = {this.getNum.bind(this)} />
           </div>
           <div className="operatorButtons">
             <OperatorButtonLayout 
-              getSym={this.getSym.bind(this)} 
+              getSym={this.getOp.bind(this)} 
               calculate={this.calculate.bind(this)}
               clear={this.clear.bind(this)}
               square={this.square.bind(this)}
